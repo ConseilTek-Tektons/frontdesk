@@ -1,0 +1,51 @@
+export type DashboardItem = { id: number; primary: string; secondary: string; tertiary: string; status: string; accent: "lime" | "violet" | "cyan" };
+type DashboardConfig = { eyebrow: string; heading: string; summary: string; primaryAction: string; secondaryAction: string; secondaryNotice: string; managePermission: string; metricLabel: string; metrics: { label: string; value: string; change: string; context: string; tone: "positive" | "warning"; progress: string }[]; trend: { label: string; value: number }[]; listTitle: string; workspaceAction: string; items: DashboardItem[]; sideTitle: string; sideSubtitle: string; sideItems: { title: string; detail: string; value: string; warning?: boolean }[]; insightTitle: string; insightBody: string; insightNotice: string; itemNoun: string; modalEyebrow: string; modalTitle: string; formFields: { name: string; label: string; placeholder: string }[]; defaultSecondary: string; defaultTertiary: string; newItemStatus: string; policyPreview: string; submitLabel: string };
+
+export const dashboard: DashboardConfig = {
+  eyebrow: "CUSTOMER SUPPORT · MORNING SHIFT",
+  heading: "The queue is healthy. Billing needs attention.",
+  summary: "Every channel lands in one ticket model with reliable threading, business-hour SLAs, and auditable routing.",
+  primaryAction: "New ticket",
+  secondaryAction: "Open queue view",
+  secondaryNotice: "Priority queue loaded with current permission and brand filters.",
+  managePermission: "tickets.manage",
+  metricLabel: "Support operations health",
+  metrics: [
+    { label: "Tickets resolved", value: "386", change: "↗ 8%", context: "this week", tone: "positive", progress: "84%" },
+    { label: "First response SLA", value: "96.2%", change: "12 at risk", context: "next hour", tone: "warning", progress: "96%" },
+    { label: "Median response", value: "18m", change: "↓ 4m", context: "from last week", tone: "positive", progress: "72%" },
+    { label: "CSAT", value: "4.7 / 5", change: "68%", context: "response rate", tone: "positive", progress: "94%" },
+  ],
+  trend: [36, 48, 41, 57, 62, 54, 68].map((value, index) => ({ label: String(index), value })),
+  listTitle: "Priority queue",
+  workspaceAction: "Open agent workspace",
+  items: [
+    { id: 1, primary: "FD-18422 · Invoice shows duplicate charge", secondary: "Billing", tertiary: "Enterprise", status: "Open", accent: "violet" },
+    { id: 2, primary: "FD-18419 · SSO group not mapped", secondary: "Identity", tertiary: "SLA 24m", status: "Pending", accent: "cyan" },
+    { id: 3, primary: "FD-18408 · Export completed", secondary: "Data", tertiary: "CSAT sent", status: "Solved", accent: "lime" },
+    { id: 4, primary: "FD-18397 · Renewal contact update", secondary: "Accounts", tertiary: "Side conversation", status: "Closed", accent: "lime" },
+  ],
+  sideTitle: "Queue health",
+  sideSubtitle: "Business-calendar aware",
+  sideItems: [
+    { title: "Enterprise", detail: "4 agents · 18 open", value: "94%" },
+    { title: "Billing", detail: "Predicted breach in 24m", value: "At risk", warning: true },
+    { title: "Product help", detail: "6 agents · 31 open", value: "98%" },
+  ],
+  insightTitle: "Duplicate-charge contacts share one cause.",
+  insightBody: "Seven tickets cite the same invoice transition. A tested macro and one engineering side conversation can answer the queue consistently.",
+  insightNotice: "Suggested macro opened with cited ticket evidence.",
+  itemNoun: "Ticket",
+  modalEyebrow: "NEW TICKET",
+  modalTitle: "Capture a customer request",
+  formFields: [
+    { name: "subject", label: "Subject", placeholder: "What does the customer need?" },
+    { name: "requester", label: "Requester email", placeholder: "customer@example.com" },
+    { name: "queue", label: "Queue", placeholder: "Enterprise" },
+  ],
+  defaultSecondary: "General",
+  defaultTertiary: "Normal priority",
+  newItemStatus: "Open",
+  policyPreview: "The ticket will be threaded by message headers, routed by queue policy, and assigned an SLA clock inside the transaction.",
+  submitLabel: "Create ticket",
+};

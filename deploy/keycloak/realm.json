@@ -1,0 +1,30 @@
+{
+  "realm": "frontdesk",
+  "enabled": true,
+  "displayName": "Frontdesk local identity broker",
+  "registrationAllowed": false,
+  "loginWithEmailAllowed": true,
+  "clients": [
+    {
+      "clientId": "frontdesk-web",
+      "name": "Frontdesk Web",
+      "enabled": true,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "local-dev-secret",
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "redirectUris": ["http://localhost:3000/api/auth/callback/enterprise-sso"],
+      "webOrigins": ["http://localhost:3000"],
+      "protocol": "openid-connect",
+      "defaultClientScopes": ["web-origins", "acr", "roles", "profile", "email", "groups"]
+    }
+  ],
+  "groups": [
+    { "name": "frontdesk-owners" },
+    { "name": "frontdesk-admins" },
+    { "name": "support-supervisors" },
+    { "name": "support-agents" },
+    { "name": "support-light-agents" },
+    { "name": "support-analytics" }
+  ]
+}

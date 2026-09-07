@@ -1,0 +1,7 @@
+import type { KnowledgeArticle } from "@/lib/assistant";
+export const knowledgeArticles: KnowledgeArticle[] = [
+  { id: "email-threading", title: "Reliable email threading", summary: "Inbound mail attaches by In-Reply-To and References message identifiers before subject heuristics are considered.", content: "Message identifiers are unique. An unmatched conversation creates a new ticket instead of guessing across customers.", tags: ["email", "thread", "message-id", "reply"] },
+  { id: "sla-clock", title: "Business-hour SLA clocks", summary: "First-response and resolution deadlines count only configured business minutes and pause only in policy-approved states.", content: "Every clock records its due, fulfilled, breached, and paused timestamps so reports remain reproducible.", tags: ["sla", "business hours", "breach", "deadline"] },
+  { id: "queue-routing", title: "Queue routing", summary: "Rules choose a queue using channel, customer tier, language, tags, and product context before assignment balances eligible agents.", content: "The selected rule and evaluated inputs are preserved in the audit trail.", tags: ["queue", "routing", "assignment", "agent"] },
+  { id: "reply-drafting", title: "AI reply drafting", summary: "The copilot may draft from approved macros and readable ticket context, but a permitted agent reviews and sends every response.", content: "Customer secrets are minimized and outbound messages are never an assistant side effect.", tags: ["ai", "reply", "macro", "customer data"] },
+];
