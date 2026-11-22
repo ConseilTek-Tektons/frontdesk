@@ -1,11 +1,11 @@
 <div align="center">
-  <img src="public/brand/mark-light.png" alt="ConseilTek" width="120" />
+  <img src="public/brand/logo.png" alt="ConseilTek" width="180" />
   <h1>Frontdesk</h1>
   <p><strong>Customer support without per-agent software tax.</strong></p>
   <p>Email threading · SLA clocks · queues and macros · enterprise SSO · configurable RBAC · grounded AI</p>
 </div>
 
-[![CI](https://github.com/ConseilTek-Tektons/frontdesk/actions/workflows/ci.yml/badge.svg)](https://github.com/ConseilTek-Tektons/frontdesk/actions/workflows/ci.yml) [![CodeQL](https://github.com/ConseilTek-Tektons/frontdesk/actions/workflows/codeql.yml/badge.svg)](https://github.com/ConseilTek-Tektons/frontdesk/actions/workflows/codeql.yml) [![License](https://img.shields.io/badge/license-Apache--2.0-a3ff12)](LICENSE)
+[![CI](https://github.com/ConseilTek-Tektons/frontdesk/actions/workflows/ci.yml/badge.svg)](https://github.com/ConseilTek-Tektons/frontdesk/actions/workflows/ci.yml) [![CodeQL](https://github.com/ConseilTek-Tektons/frontdesk/actions/workflows/codeql.yml/badge.svg)](https://github.com/ConseilTek-Tektons/frontdesk/actions/workflows/codeql.yml) [![License](https://img.shields.io/badge/license-Apache--2.0-222c62)](LICENSE)
 
 Frontdesk brings email, web, API, and chat requests into one auditable ticket model. It threads replies using message headers, routes work into queues, calculates service deadlines against business calendars, and helps agents compose consistent responses. The complete working solution and both cloud deployment paths live in this repository.
 
